@@ -1,12 +1,6 @@
 @import "../../../color-variables.scss";
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-top: 20px;
-}
-
+// Seção principal
 .main-section {
   display: flex;
   justify-content: center;
@@ -38,7 +32,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: 40px;
 
   .benefit-data {
@@ -67,6 +60,254 @@ main {
   }
 }
 
+// Seção About
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+  text-align: center;
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $primary-text;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: $secondary-text;
+    max-width: 800px;
+  }
+}
+
+// Seção How It Works
+.how-it-works-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 40px;
+  text-align: center;
+  background-color: $bg-secondary;
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $light-primary-color;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .step {
+      h3 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: $primary-text;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: $primary-text;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .how-it-works-section {
+    .steps {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
+
+// Seção Testimonials
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 40px;
+  text-align: center;
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $primary-text;
+  }
+
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .testimonial {
+      padding: 20px;
+      background-color: $light-primary-color;
+      border-radius: 10px;
+      max-width: 600px;
+
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: $primary-text;
+
+        &:last-child {
+          margin-top: 10px;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials-section {
+    .testimonials {
+      flex-direction: row;
+      justify-content: space-around;
+
+      .testimonial {
+        max-width: 45%;
+      }
+    }
+  }
+}
+
+// Seção FAQ
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+  text-align: center;
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $primary-text;
+  }
+
+  .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .question {
+      h3 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: $primary-text;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: $secondary-text;
+      }
+    }
+  }
+}
+
+// Seção Contato
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+  text-align: center;
+  background-color: $secondary-color;
+  color: #fff;
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 600px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      label {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      textarea {
+        resize: vertical;
+        height: 150px;
+      }
+    }
+
+    .submit-button {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 15px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $light-primary-color;
+      }
+    }
+  }
+}
+
+// Estilos para a seção de CTA (já existente)
 .cta-section {
   display: flex;
   align-items: center;
