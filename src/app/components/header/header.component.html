@@ -1,3 +1,9 @@
+<!-- app-header.component.html -->
 <header class="app-header">
-  <img ngSrc="./assets/logo.webp" width="250" height="200"/>
+  <div class="logo-container">
+    <img ngSrc="./assets/logo-transparente.png" width="150" height="100" alt="Logo Projeto Arcanjo" />
+  </div>
+  <div class="navigation">
+    <button (click)="navigateToLogin()" class="login-button">Login</button>
+  </div>
 </header>

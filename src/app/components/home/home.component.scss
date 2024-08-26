@@ -325,6 +325,19 @@
   }
 }
 
+.login-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
 @media (min-width: 768px) {
   .main-section {
     flex-direction: row;

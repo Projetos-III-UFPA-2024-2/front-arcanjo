@@ -1,0 +1,24 @@
+<!-- projeto-destaque.component.html -->
+<div class="project-card">
+  <div class="project-image">
+    <img [src]="imageUrl" alt="Imagem do projeto">
+  </div>
+  <div class="project-details">
+    <div class="project-label">Projeto de destaque</div>
+    <h3>{{ title }}</h3>
+    <p>por {{ author }}</p>
+    <p>{{ description }}</p>
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="progress"></div>
+    </div>
+    <div class="project-stats">
+      <span>{{ progress }}% </span>
+      <span>R$ {{ raised }} Levantados</span>
+      <span>{{ daysLeft }} dias Restantes</span>
+    </div>
+    <div class="project-location">
+      <span>{{ location }}</span>
+      <span>{{ category }}</span>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
  import { Component } from '@angular/core';
  import {HeaderComponent} from "../header/header.component";
- import {RouterOutlet} from "@angular/router";
+ import {Router, RouterOutlet} from "@angular/router";
  import {NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -16,5 +16,9 @@
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  constructor(private router: Router) {}
 
+  navigateToLogin() {
+    this.router.navigate(['/login']);
+  }
 }
