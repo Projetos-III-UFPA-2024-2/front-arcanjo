@@ -1,0 +1,14 @@
+<div class="carousel-container" *ngIf="items.length > 0">
+  <div class="carousel">
+    <div class="carousel-item" *ngFor="let item of items">
+      <img [src]="item.image" alt="Carousel Image">
+      <div class="carousel-caption">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+        <button (click)="onButtonClick(item)">Conheça o projeto</button>
+      </div>
+    </div>
+  </div>
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>

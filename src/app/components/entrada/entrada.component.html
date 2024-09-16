@@ -1,17 +1,1 @@
-<!-- entrada.component.html -->
-<div class="entrada-container">
-  <h1>Projetos de destaque</h1>
-  <div class="projects-grid">
-    <app-projeto-destaque *ngFor="let projeto of projetos"
-                          [title]="projeto.title"
-                          [author]="projeto.author"
-                          [description]="projeto.description"
-                          [progress]="projeto.progress"
-                          [raised]="projeto.raised"
-                          [daysLeft]="projeto.daysLeft"
-                          [location]="projeto.location"
-                          [category]="projeto.category"
-                          [imageUrl]="projeto.imageUrl">
-    </app-projeto-destaque>
-  </div>
-</div>
+<app-carousel [items]="carouselItems"></app-carousel>
