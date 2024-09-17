@@ -1,5 +1,13 @@
 @import "../../../color-variables.scss";
 
+.headline h1 {
+  font-size: 36px; /* Ajuste conforme necessário */
+  line-height: 1.2; /* Aumente para adicionar mais espaçamento entre as linhas */
+  text-align: center; /* Alinha o texto ao centro */
+  margin: 0 20px; /* Adiciona margem para evitar que o texto encoste nas bordas */
+  overflow: hidden; /* Garante que o texto não transborde do container */
+}
+
 // Seção principal
 .main-section {
   display: flex;

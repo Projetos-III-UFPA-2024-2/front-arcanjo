@@ -1,0 +1,23 @@
+<div class="destaque-container">
+  <h2>Projetos de destaque</h2>
+  <div class="destaques">
+    <mat-card *ngFor="let item of destaqueItems" class="destaque-card" (click)="irParaDetalhe()">
+      <img mat-card-image [src]="item.image" alt="{{ item.title }}">
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+        <mat-progress-bar mode="determinate" [value]="item.progress"></mat-progress-bar>
+        <div class="progress-info">
+          <span>{{ item.progress }}%</span>
+          <span>{{ item.amount | currency:'BRL' }}</span>
+          <span>{{ item.daysLeft }} dias restantes</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <button mat-raised-button color="primary">Ver todos</button>
+</div>

@@ -1,0 +1,15 @@
+<div class="projeto-detalhe-container">
+  <h1>{{ projeto.title }}</h1>
+  <h2>por {{ projeto.autor }}</h2>
+  <div class="projeto-imagem">
+    <img [src]="projeto.image" alt="{{ projeto.title }}">
+  </div>
+  <div class="projeto-info">
+    <h3>R$ {{ projeto.valorArrecadado | currency:'BRL' }}</h3>
+    <p>apoiados por {{ projeto.apoiadores }} pessoas</p>
+    <mat-progress-bar mode="determinate" [value]="projeto.progress"></mat-progress-bar>
+    <p>{{ projeto.progress }}%</p>
+    <p>{{ projeto.diasRestantes }} dias restantes</p>
+  </div>
+  <button mat-raised-button color="primary">Investir neste projeto</button>
+</div>

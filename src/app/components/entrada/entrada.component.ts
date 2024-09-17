@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import {ProjetoDestaqueComponent} from "../projeto-destaque/projeto-destaque.component";
 import {CarouselComponent} from "../../carousel/carousel.component";
+import {DestaqueComponent} from "../destaque/destaque.component";
 
 @Component({
   selector: 'app-entrada',
   standalone: true,
-  imports: [ProjetoDestaqueComponent, CarouselComponent],
+  imports: [ProjetoDestaqueComponent, CarouselComponent, DestaqueComponent],
   templateUrl: './entrada.component.html',
   styleUrl: './entrada.component.scss'
 })
